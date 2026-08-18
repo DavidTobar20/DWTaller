@@ -2,14 +2,21 @@ window.onload = function () {
 
     var fichas = document.querySelectorAll(".ficha");
 
+    var zonaControles = document.getElementById("zona-controles") || document.body;
+
     var boton = document.createElement("button");
     boton.textContent = "Mostrar sólo héroes";
     boton.classList.add("boton-personajes")
-    document.body.appendChild(boton);
-    
+    zonaControles.appendChild(boton);
+
 
 
     var mostrandoSoloHeroes = false;
+
+    // Se oculta la columna de Bootstrap y no sólo la ficha, para que no quede un hueco en el Grid
+    function columnaDe(ficha) {
+        return ficha.closest(".col-12") || ficha;
+    }
 
     boton.addEventListener("click", function () {
 
@@ -18,7 +25,7 @@ window.onload = function () {
             for (var ficha of fichas) {
 
                 if (ficha.getAttribute("data-tipo") === "villano") {
-                    ficha.style.display = "none";
+                    columnaDe(ficha).style.display = "none";
                 } else {
                     ficha.classList.add("resaltado");
                 }
@@ -32,7 +39,7 @@ window.onload = function () {
 
             for (var ficha of fichas) {
 
-                ficha.style.display = "";
+                columnaDe(ficha).style.display = "";
                 ficha.classList.remove("resaltado");
 
             }
@@ -74,12 +81,12 @@ window.onload = function () {
     var botonFrase = document.createElement("button");
     botonFrase.textContent = "Frase del día";
     botonFrase.classList.add("boton-frase")
-    document.body.appendChild(botonFrase);
+    zonaControles.appendChild(botonFrase);
     botonFrase.addEventListener("click", function () {
         cargarFraseDelDia(function (frase) {
             var p = document.createElement("p");
             p.textContent = frase;
-            document.body.appendChild(p);
+            zonaControles.appendChild(p);
         });
     });
 
@@ -100,7 +107,7 @@ window.onload = function () {
         var botonFav = document.createElement("button");
         botonFav.textContent = "⭐ Favorito";
         botonFav.classList.add("boton-favorito");
-        ficha.appendChild(botonFav);
+        (ficha.querySelector(".card-body") || ficha).appendChild(botonFav);
         botonFav.addEventListener("click", function () {
             var nombreEl = this.parentElement.querySelector(".nombre");
             guardarFavorito(nombreEl.textContent)
