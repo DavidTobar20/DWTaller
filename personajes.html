@@ -1,151 +1,239 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="estilos.css">
+
     <title>Personajes</title>
 </head>
 
 <body>
 
-    <h1 id="titulo-galeria">Galería de Personajes</h1>
-
-    <nav>
-        <a href="index.html" class=s"inicio">← Volver al inicio</a>
+    <nav class="navbar navbar-expand-lg navbar-warzone">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">WarZone</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link inicio" href="index.html">← Volver al inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#titulo-galeria">Galería</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="galerias">
+    <div class="container my-4">
+        <div id="carruselWarzone" class="carousel slide carrusel-warzone" data-bs-ride="carousel">
 
-        <!-- Ghost -->
-        <article class="ficha"  data-tipo="heroe">
+            <div class="carousel-inner rounded">
 
-            <img class="imagen" src="img/i1.jpg" alt="Simon Ghost Riley">
+                <div class="carousel-item active">
+                    <img src="img/Carrusel1.jpg" class="d-block w-100 img-carrusel"
+                        alt="Operadores saltando en paracaídas sobre el estadio de Verdansk">
+                    <div class="carousel-caption">
+                        <h5>Explora WarZone</h5>
+                        <p>Descubre un mundo de operadores, escuadrones y batallas legendarias.</p>
+                    </div>
+                </div>
 
-            <h2 class="nombre">
-                Simon "Ghost" Riley
-            </h2>
+                <div class="carousel-item">
+                    <img src="img/Carrusel2.avif" class="d-block w-100 img-carrusel"
+                        alt="Operador listo para entrar en combate">
+                    <div class="carousel-caption">
+                        <h5>Forja tu leyenda</h5>
+                        <p>Elige tu personaje y comienza tu propia partida.</p>
+                    </div>
+                </div>
 
-            <p class="clase">Guerrero</p>
+                <div class="carousel-item">
+                    <img src="img/Carrusel3.jpg" class="d-block w-100 img-carrusel"
+                        alt="Escuadrón de tres operadores avanzando juntos">
+                    <div class="carousel-caption">
+                        <h5>Comparte la aventura</h5>
+                        <p>Juega, diviértete y encuentra aliados en el camino.</p>
+                    </div>
+                </div>
 
-            <p>
-                Simon "Ghost" Riley es un icónico operador británico de las fuerzas especiales SAS y segundo
-                al mando de la Fuerza Operativa 141. Destaca en Call of Duty: Warzone por su misteriosa máscara con
-                diseño de calavera, gafas oscuras y un perfil letal enfocado en operaciones secretas.
-            </p>
+            </div>
 
-            <h3>Estadísticas:</h3>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselWarzone" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselWarzone" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
 
-            <ul class="stats">
-                <li>Fuerza: 70%</li>
-                <li>Velocidad: 58%</li>
-                <li>Defensa: 80%</li>
-            </ul>
+        </div>
+    </div>
 
-            <p class="vida">HP: 100%</p>
+    <div class="container">
 
-        </article>
+        <h1 id="titulo-galeria" class="text-center">Galería de Personajes</h1>
 
-        <!-- Kai -->
-        <article class="ficha" data-tipo="villano">
+        <div class="galerias row g-3">
 
-            <img class="imagen" src="img/i2.webp" alt="Kai">
+            <!-- Ghost -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <article class="ficha card h-100" data-tipo="heroe">
+                    <div class="card-body">
 
-            <h2 class="nombre">
-                Kai
-            </h2>
+                        <img class="imagen" src="img/i1.jpg" alt="Simon Ghost Riley">
 
-            <p class="clase">Samurái</p>
+                        <h2 class="nombre">
+                            Simon "Ghost" Riley
+                        </h2>
 
-            <p>
-                Kai es un hábil samurái que destaca por su disciplina, velocidad y precisión en el combate.
-                Su entrenamiento le permite enfrentarse a varios enemigos utilizando técnicas de espada y
-                movimientos ágiles.
-            </p>
+                        <p class="clase">Guerrero</p>
 
-            <h3>Estadísticas:</h3>
+                        <p>
+                            Simon "Ghost" Riley es un icónico operador británico de las fuerzas especiales SAS y segundo
+                            al mando de la Fuerza Operativa 141. Destaca en Call of Duty: Warzone por su misteriosa máscara con
+                            diseño de calavera, gafas oscuras y un perfil letal enfocado en operaciones secretas.
+                        </p>
 
-            <ul class="stats">
-                <li>Fuerza: 82%</li>
-                <li>Velocidad: 94%</li>
-                <li>Defensa: 68%</li>
-            </ul>
+                        <h3>Estadísticas:</h3>
 
-            <p class="vida">HP: 90%</p>
+                        <ul class="stats">
+                            <li>Fuerza: 70%</li>
+                            <li>Velocidad: 58%</li>
+                            <li>Defensa: 80%</li>
+                        </ul>
 
-        </article>
+                        <p class="vida">HP: 100%</p>
 
-        <!-- Rambo -->
-        <article class="ficha" data-tipo="heroe">
+                    </div>
+                </article>
+            </div>
 
-            <img class="imagen" src="img/i3.webp" alt="Rambo">
+            <!-- Kai -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <article class="ficha card h-100" data-tipo="villano">
+                    <div class="card-body">
 
-            <h2 class="nombre">
-                Rambo
-            </h2>
+                        <img class="imagen" src="img/i2.webp" alt="Kai">
 
-            <p class="clase">Superviviente</p>
+                        <h2 class="nombre">
+                            Kai
+                        </h2>
 
-            <p>
-                John Rambo es un veterano de guerra experto en supervivencia y combate en la selva.
-                Gracias a su fortaleza física y experiencia militar puede superar cualquier misión,
-                incluso cuando está completamente solo.
-            </p>
+                        <p class="clase">Samurái</p>
 
-            <h3>Estadísticas:</h3>
+                        <p>
+                            Kai es un hábil samurái que destaca por su disciplina, velocidad y precisión en el combate.
+                            Su entrenamiento le permite enfrentarse a varios enemigos utilizando técnicas de espada y
+                            movimientos ágiles.
+                        </p>
 
-            <ul class="stats">
-                <li>Fuerza: 96%</li>
-                <li>Velocidad: 76%</li>
-                <li>Defensa: 88%</li>
-            </ul>
+                        <h3>Estadísticas:</h3>
 
-            <p class="vida">HP: 98%</p>
+                        <ul class="stats">
+                            <li>Fuerza: 82%</li>
+                            <li>Velocidad: 94%</li>
+                            <li>Defensa: 68%</li>
+                        </ul>
 
-        </article>
+                        <p class="vida">HP: 90%</p>
 
-        <!-- Jackal -->
-        <article class="ficha" data-tipo="heroe">
+                    </div>
+                </article>
+            </div>
 
-            <img class="imagen" src="img/i4.webp" alt="Owethu Jackal Mabuza">
+            <!-- Rambo -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <article class="ficha card h-100" data-tipo="heroe">
+                    <div class="card-body">
 
-            <h2 class="nombre">
-                Owethu "Jackal" Mabuza
-            </h2>
+                        <img class="imagen" src="img/i3.webp" alt="Rambo">
 
-            <p class="clase">Operador de Asalto</p>
+                        <h2 class="nombre">
+                            Rambo
+                        </h2>
 
-            <p>
-                Jackal es un operador de fuerzas especiales reconocido por su excelente puntería y su
-                capacidad para liderar ataques tácticos. Es un combatiente versátil que sobresale en
-                enfrentamientos de media distancia.
-            </p>
+                        <p class="clase">Superviviente</p>
 
-            <h3>Estadísticas:</h3>
+                        <p>
+                            John Rambo es un veterano de guerra experto en supervivencia y combate en la selva.
+                            Gracias a su fortaleza física y experiencia militar puede superar cualquier misión,
+                            incluso cuando está completamente solo.
+                        </p>
 
-            <ul class="stats">
-                <li>Fuerza: 85%</li>
-                <li>Velocidad: 83%</li>
-                <li>Defensa: 91%</li>
-            </ul>
+                        <h3>Estadísticas:</h3>
 
-            <p class="vida">HP: 95%</p>
+                        <ul class="stats">
+                            <li>Fuerza: 96%</li>
+                            <li>Velocidad: 76%</li>
+                            <li>Defensa: 88%</li>
+                        </ul>
 
-        </article>
+                        <p class="vida">HP: 98%</p>
+
+                    </div>
+                </article>
+            </div>
+
+            <!-- Jackal -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <article class="ficha card h-100" data-tipo="heroe">
+                    <div class="card-body">
+
+                        <img class="imagen" src="img/i4.webp" alt="Owethu Jackal Mabuza">
+
+                        <h2 class="nombre">
+                            Owethu "Jackal" Mabuza
+                        </h2>
+
+                        <p class="clase">Operador de Asalto</p>
+
+                        <p>
+                            Jackal es un operador de fuerzas especiales reconocido por su excelente puntería y su
+                            capacidad para liderar ataques tácticos. Es un combatiente versátil que sobresale en
+                            enfrentamientos de media distancia.
+                        </p>
+
+                        <h3>Estadísticas:</h3>
+
+                        <ul class="stats">
+                            <li>Fuerza: 85%</li>
+                            <li>Velocidad: 83%</li>
+                            <li>Defensa: 91%</li>
+                        </ul>
+
+                        <p class="vida">HP: 95%</p>
+
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+        <div id="zona-controles" class="text-center my-4"></div>
+
+        <div class="redes-pagina">
+            <h3>Conecta con nosotros</h3>
+            <p>Síguenos en nuestras redes</p>
+            <a href="#">📘 Facebook</a>
+            <p>Estamos activos 24/7</p>
+            <a href="#">📷 Instagram</a>
+            <p>Respuestas rápidas garantizadas</p>
+            <a href="#">𝕏 X</a>
+        </div>
 
     </div>
 
-    <div class="redes-pagina">
-        <h3>Conecta con nosotros</h3>
-        <p>Síguenos en nuestras redes</p>
-        <a href="#">📘 Facebook</a>
-        <p>Estamos activos 24/7</p>
-        <a href="#">📷 Instagram</a>
-        <p>Respuestas rápidas garantizadas</p>
-        <a href="#">𝕏 X</a>
-
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
